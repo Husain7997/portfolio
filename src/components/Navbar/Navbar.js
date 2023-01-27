@@ -4,7 +4,7 @@ import logo from '../../assets/logo.jpeg'
 
 const Navbar = () => {
     return (
-        <navbar className="navbar flex justify-between bg-base-100">
+        <nav className="navbar flex justify-between bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -18,7 +18,7 @@ const Navbar = () => {
             <li><Link to='/'>Blog</Link></li>
             </ul>
           </div>
-          <Link to='/'> className="btn btn-ghost normal-case text-xl">
+          <Link to='/' className="btn btn-ghost normal-case text-xl">
           <div className="w-1/4 rounded-full ring ring-offset-base-100 ring-offset-2">
     <img src={logo} alt='husain ahmed' className='rounded' />
   </div>
@@ -35,9 +35,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Resume</a>
+          <Link to='/' className="btn">Resume</Link>
         </div>
-      </navbar>
+      </nav>
     );
 };
 
