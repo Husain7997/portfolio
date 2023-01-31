@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.jpeg'
+// import DownloadPDF from './Resume';
+import file from '../../assets/file.pdf';
+import handleDownload from './Resume';
 
 const Navbar = () => {
+  const [downloadStatus, setDownloadStatus] = useState(false);
     return (
         <nav className="navbar flex justify-between bg-base-100">
         <div className="navbar-start">
@@ -35,7 +39,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to='/' className="btn">Resume</Link>
+          <Link to='/' onClick={()=>{handleDownload(file, setDownloadStatus(true));}} className="btn">Resume</Link>
         </div>
       </nav>
     );
